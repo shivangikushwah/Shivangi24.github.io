@@ -1,171 +1,121 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Baloo Bhai', cursive;
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 body{
-    background: white;
-    color: #0a0909;;
-}
-.container{
-    padding:3% 10% 3% 10%;
-}
-.container h1{
-    color: purple;
+    background: #080808;
+    color: #fff;;
 }
 html{
     scroll-behavior: smooth;
 }
-:root{
-    --navbar-height:59px
-    ;
-}
-#navbar{
-    padding-top: 10px;
+#header{
+    width: 100%;
+    height:100vh;
+    /* background-image:url(s3.jpeg); */
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.shivuu{
-    display: flex;
-    justify-content: left;
-    color: #fff;
-    padding: 10px;
-    font-size: 30px;
-} 
 
-/* navigation bar */
-#navbar{
-    position: sticky;
-    top:0;
+#sidemenu{
+    margin-left: 180px;
+    padding-right: 500px;
 }
-#navbar ul{
-    margin-left: 320px;
-    font-family: 'Baloo Bhai', cursive;
+
+.container{
+    padding:0px 10px 0 10%;
 }
-#navbar::before{
+.image{
+    flex-basis: 18%;
+    margin-right: 250px;
+    margin-top: 120px;
+}
+.image img{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 120%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+nav{
+    padding-top: 10px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    position: fixed;
+    background-color: black;
+}
+nav{
+    position: relative;
+}
+nav ul{
+    display: flex;
+}
+nav::before{
     content: "";
     background-color: blueviolet;
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
-#navbar ul li{
+nav ul li{
     display: inline-block;
     list-style: none;
-    font-size: 1.3rem;
     margin: 15px 20px;
 }
-#navbar ul li a{
-    color: white;
-    font-size: 1.3rem;
-    position: relative;
+nav ul li a{
+    color:#fff;
     text-decoration: none;
+    font-size: 18px;
+    position: relative;
 }
-#navbar ul li a::after{
+nav ul li a::after{
     content:'';
     width: 0%;
     height: 3px;
-    background: white;
+    background: #ff004f;
     position : absolute;
-    left: 0;
-    bottom : -5px;
+    left:0;
+    bottom : -6px;
     transition: 0.3s;
 }
-#navbar ul li a:hover::after{
+nav ul li a:hover::after{
     width: 100%;
+    
 }
 
-/* ----------------home section---------------- */
-#home{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.header-text{
+    margin-top: 100px;
+    font-size: 40px;
 }
-#home::before{
-    content: "";
-    position: absolute;
-    background: url(background-1.jpg) no-repeat center center/cover;
-    height: 100%;
-    width: 100%;
-    z-index: -2;
-    opacity: 0.4;
+.header-text h1{
+    font-size: 40px;
+    margin-top: 200px;
 }
-#home span{
+.header-text span{
+    color: #ff004f;
+    font-size: 40px;
     margin-top: 20px;
-    color: purple;
-    text-align: center;
-    font-size: 3rem;
-    font-family: 'Bree Serif', serif;
 }
-.h-primary-1{
-    color: purple;
-    margin-top: 40px;
-    font-size: 3rem;
-    padding: 10px;
-}
-.h-primary{
-    margin-left: 20px;
-    margin-top: 15px;
-    font-size: 3rem;
-    padding: 10px;
-}
-
-
-.social-icons1{
-    font-size: 2rem;
-}
-.social-icons1 i{
-    padding: 10px;
-    margin-left: 20px;
-    color: black;
-}
-.social-icons1 i:hover{
-    color: blueviolet;
-    background-color: aliceblue;
-    border: 2px solid blueviolet;
-    border-radius: 50%;
-}
-
-.btttn{
-    margin: 30px 20px 70px;
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 15px;
-    background-color : blueviolet ;
-    color: white;
-    font-size: 1.2rem;
-}
-.btttn:hover{
-    color: blueviolet;
-    background: white;
-    border: 2px solid blueviolet;
-}
-.btttn a{
-    text-decoration: none;
-    color: white;
-}
-.btttn a:hover{
-    color: blueviolet;
-    background: white;
-}
-
 
 
 /* ____________________________about_________________________ */
-.sub-title{
-    color: purple;
-}
 .about{ 
     padding: 80px 0;
-    color:purple;
+    color:#ababab;
 }
 .row{
-    margin-top: 70px;
+    
+    margin-top: 100px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -191,7 +141,6 @@ html{
     margin: 20px 0;
 }
 .tab-links{
-    color: purple;
     margin: 10px 40px;
     font-size: 23px;
     font-weight: 400;
@@ -202,7 +151,7 @@ html{
     content:'';
     width: 0%;
     height: 3px;
-    background: purple;
+    background: #ff004f;
     position : absolute;
     left:0;
     bottom : -8px;
@@ -219,7 +168,7 @@ html{
     margin: 10px 0;
 }
 .tab-contents ul li span{
-    color:blueviolet;
+    color:#ff004f;
     margin-bottom: 10px;
     font-size: 20px;
 }
@@ -250,7 +199,7 @@ div#training {}.tab-contents.active-tab {
     margin-top: 50px;
 }
 .services-list div{
-    background: rgb(221, 201, 239);
+    background: #262626;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -258,16 +207,11 @@ div#training {}.tab-contents.active-tab {
     transition: background 0.5s, tansform 0.5s;
 }
 .services-list div i{
-    display: flex;
-    justify-content: center;
     font-size: 50px;
     margin-bottom: 30px;
 }
 .services-list div h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
@@ -279,9 +223,8 @@ div#training {}.tab-contents.active-tab {
     display: inline-block;
 }
 .services-list div:hover{
-    background: rgb(161, 74, 242);
+    background: #ff004f;
     border: #fff;
-    color: #fff;
     transform: translateY(-10px);
 }
 
@@ -302,7 +245,6 @@ div#training {}.tab-contents.active-tab {
 }
 .work img{
     width: 100%;
-    border: 2px solid blueviolet;
     border-radius: 10px;
     display: block;
     transition: transform .5s;
@@ -310,7 +252,7 @@ div#training {}.tab-contents.active-tab {
 .layer{
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(252, 247, 247, 0.6),rgb(142, 24, 142));
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -350,16 +292,15 @@ div#training {}.tab-contents.active-tab {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 2px solid blueviolet;
+    border: 1px solid #ff004f;
     padding: 14px 30px;
     border-radius: 6px;
     text-decoration: none;
-    color: blueviolet;
+    color: #fff;
     transition: background 0.5s;
 }
 .btn:hover{
-    background: blueviolet;
-    color: #fff;
+    background: #ff004f;
 }
 /* --------------contact------------- */
 .contact-left{
@@ -372,7 +313,7 @@ div#training {}.tab-contents.active-tab {
     margin-top: 40px;
 }
 .contact-left p i{
-    color: blueviolet;
+    color: #ff004f;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -383,22 +324,22 @@ div#training {}.tab-contents.active-tab {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #0b0b0b;
+    color: #ababab;
     display: inline-blockS;
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: blueviolet;
+    color: #ff004f;
     transform: translateY(-5px);
 }
 .btn.btn2{
     margin-right: 40px;
     display: inline-block;
-    color: blueviolet;
+    background: #ff004f;
 }
 .btn2:hover{
-    background: blueviolet;
-    color: white;
+    background: #fff;
+    color: #ff004f;
 }
 .contact-right form{
     width:100%;
@@ -407,10 +348,10 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: rgb(224, 204, 243);
+    background: #262626;
     padding: 15px;
     margin: 15px 0;
-    color: blueviolet;
+    color: #fff;
     font-size: 18px;
     border-radius: 6px;
 }
@@ -427,55 +368,13 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 500px){
-    
     #sidemenu{
         padding-right: 0px;
     }
-    #home .h-primary-1{
-        font-size: 2rem;
-    }
-    #home .h-primary{
-        font-size: 2.1rem;
-        margin-bottom: 20px;
-    }
     
-
-    .social-icons1{
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-    .social-icons1 i{
-        margin: 2px;
-    }
-    .btttn1{
-        display: flex;
-        align-items: center;
-        justify-self: center;
-        margin-bottom: 80px;
-    }
-    .btttn1 button a{
-        font-size: 15px;
-    }
-    #home span{
-        font-size: 2.2rem;
-    }
-    #navbar ul{
-        margin-left: 20px;
-    }
-    #navbar {
-       display: block;
-    }
-
-    #navbar div h1{
-        font-size: 20px;
-        margin-left: 150px;
-    }
-    #navbar ul li a{
-        font-size: 10px;
-    }
-
     .header-text{
-
+        width: 240px;
+        margin-top: 80px;
         padding-bottom: 10px;
         font-size: 30px;
     }
@@ -487,11 +386,60 @@ nav .fa-solid{
     .header-text span{
         font-size: 33px;
     }
+    nav{
+        background-color: black;
+        padding: 20px;
+    }
+    nav h1{
+        margin-top: 5px;
+        font-size: 30px;
+    }
+    
+    nav .fa-solid{
+        
+        margin-left: 135px;
+        display:block;
+        font-size: 25px;
+    }
+    #header nav .fa-bars{
+        margin-left:180px;
+    }
+    
     .btn.btn2{ 
         padding:10px 10px;
         font-size: 10px;
         margin-top: 30px;
     } 
+   
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 320px;
+        padding-top: 50px;
+        border-radius: 20px 0px 20px 15px;
+        z-index: 2;
+        transition: rigth 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul li a:hover{
+        color:#ff004f;
+        background-color: #fff;
+        padding: 8px;
+        border-radius: 10px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
     .sub-title{
         font-size: 30px;
     }
@@ -528,7 +476,7 @@ nav .fa-solid{
 
 }
 #msg{
-    color: blueviolet;
+    color: #616752;
     margin-top: -30px;
     display: block;
 }

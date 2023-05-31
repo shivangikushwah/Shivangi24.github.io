@@ -432,9 +432,7 @@ nav .fa-solid{
     #sidemenu{
         padding-right: 0px;
     }
-    #home{
-        height: 100vh;
-    }
+    
     #home .h-primary-1{
         font-size: 2rem;
     }
